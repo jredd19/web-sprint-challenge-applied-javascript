@@ -2,8 +2,8 @@ const Header = (title, date, temp) => {
 
   // creating elements
   const header = document.createElement('div');
-  const headerTitle = document.createElement('h1');
   const headerDate = document.createElement('span');
+  const headerTitle = document.createElement('h1');
   const headerTemp = document.createElement('span');
 
   // creating hierarchy
@@ -39,11 +39,13 @@ const Header = (title, date, temp) => {
   //
 }
 
+console.log(Header('Lambda Times', 'January 6, 2021', 26));
+
 const headerAppender = (selector) => {
 
-  // setting entry point
-  const entryPoint = document.querySelector(selector)
-  .document.createElement(Header('Lambda Times', 'January 6, 2021', 26 ));
+  // setting
+  const entryPoint = document.querySelector(selector);
+  document.body.appendChild(Header());
 
 
   // TASK 2
