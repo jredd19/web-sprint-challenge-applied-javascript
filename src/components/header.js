@@ -13,9 +13,9 @@ const Header = (title, date, temp) => {
 
   // setting element classes
   header.classList.add('header');
-  headerTitle.classList.add('header-title');
-  headerDate.classList.add('header-date');
-  headerTemp.classList.add('header-temp');
+  headerTitle.classList.add('header');
+  headerDate.classList.add('date');
+  headerTemp.classList.add('temp');
 
 // adding text 
   headerTitle.textContent = title;
@@ -39,13 +39,12 @@ const Header = (title, date, temp) => {
   //
 }
 
-Header();
-
 const headerAppender = (selector) => {
 
   // setting entry point
-const entryPoint = document.querySelector(selector);
-axios.get(Header);
+  const entryPoint = document.querySelector(selector)
+  .document.createElement(Header('Lambda Times', 'January 6, 2021', 26 ));
+
 
   // TASK 2
   // ---------------------
@@ -54,7 +53,5 @@ axios.get(Header);
   // It should append the header to the element in the DOM that matches the given selector.
   //
 }
-
-console.log(headerAppender('.header-container'))
 
 export { Header, headerAppender }
